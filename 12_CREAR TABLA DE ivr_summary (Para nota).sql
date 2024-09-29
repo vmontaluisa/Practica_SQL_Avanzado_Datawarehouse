@@ -23,5 +23,6 @@ SELECT DISTINCT
     repeated_phone_24H_agregado AS repeated_phone_24H, -- Calculado anteriormente (flag de llamada repetida en 24H)
     cause_recall_phone_24H_agregado   AS cause_recall_phone_24H                       -- Calculado anteriormente (flag de llamada siguiente en 24H)
 FROM `keepcoding.ivr_detail`
+WHERE customer_phone_agregacion is not null -- Para presentar solo registros con numero de telefono
 
 
